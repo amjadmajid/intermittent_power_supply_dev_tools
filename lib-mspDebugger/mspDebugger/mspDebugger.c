@@ -1,5 +1,5 @@
 #include "msp430.h"
-#include "uart-debugger.h"
+#include "mspDebugger.h"
 
 
 void uart_init()

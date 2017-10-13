@@ -1,5 +1,5 @@
 #include <msp430.h> 
-#include <uart-debugger.h>
+#include <mspDebugger.h>
 
 #define __nv  __attribute__((section(".nv_vars")))
 

@@ -1,4 +1,4 @@
-#include "codeProfiler.h"
+#include "mspProfiler.h"
 
 void cp_init(){
 	uart_init();

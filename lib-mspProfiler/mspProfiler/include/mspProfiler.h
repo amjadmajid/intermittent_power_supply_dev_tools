@@ -6,7 +6,7 @@
  */
 
 #include "msp430.h"
-#include "uart-debugger.h"
+#include "mspDebugger.h"
 #include <stdint.h>
 
 #ifndef INCLUDE_CODEPROFILER_H_
