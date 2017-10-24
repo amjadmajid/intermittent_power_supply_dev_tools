@@ -29,6 +29,8 @@ void  cp_sendRes(char * resId)
      * it send the current
      */
 
+    __disable_interrupt();
+
     // Halt timer_b
    unsigned int x =  TB0R;
    x -=15;
@@ -39,7 +41,9 @@ void  cp_sendRes(char * resId)
     uart_sendText("\n\r", 2);
 
     __overflow = 0;                 // reset the overflow counter
+    __enable_interrupt();
     TB0CTL |=  TBCLR;                // reset the timer
+
 }
 
 unsigned int __overflow = 0;   // This must  be non-volatile

@@ -36,7 +36,7 @@
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_GNU_6.0.compilerID.OPT_FOR_SPACE.1557786895" name="Optimize for space rather than speed (-Os)" superClass="com.ti.ccstudio.buildDefinitions.MSP430_GNU_6.0.compilerID.OPT_FOR_SPACE" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.MSP430_GNU_6.0.compilerID.OTHER_FLAGS.95992701" name="Other flags" superClass="com.ti.ccstudio.buildDefinitions.MSP430_GNU_6.0.compilerID.OTHER_FLAGS" useByScannerDiscovery="false" valueType="stringList">
-									<listOptionValue builtIn="false" value="-mlarge"/>
+									<listOptionValue builtIn="false" value=""/>
 									<listOptionValue builtIn="false" value="-mhwmult=f5series"/>
 									<listOptionValue builtIn="false" value="-mcode-region=none"/>
 									<listOptionValue builtIn="false" value="-mdata-region=none"/>

@@ -40,11 +40,14 @@ void uart_sendStr(uint8_t * c)
     /*
      * uart_sendStr assumes that the string is null terminated
      */
+
     while(*c){
        while(!(UCA0IFG&UCTXIFG));
        UCA0TXBUF = *c;
+       __delay_cycles(10);
        c++;
    }
+
 
 }
 
@@ -56,8 +59,12 @@ void uart_sendByte(uint8_t n)
 
 void uart_sendHex8(uint8_t n)
 {
+
     uart_sendHex_digit( (n>>4) & 0xf );
+    __delay_cycles(10);
     uart_sendHex_digit( n & 0xf );
+    __delay_cycles(10);
+
 }
 
 
