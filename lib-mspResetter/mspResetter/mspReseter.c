@@ -56,12 +56,10 @@ void mr_auto_rand_reseter(unsigned int interval)
 {
    rstInterval = interval;
 
-
    if(__noiseSel >= 200)
    {
        __noiseSel=0;
    }
-
 
   TA0CCTL0 = CCIE;                          // TACCR0 interrupt enabled
   TA0CCR0 =rstInterval+__noise[__noiseSel]; // comment: noise is amplified as well by divider
@@ -84,8 +82,6 @@ void __attribute__ ((interrupt(TIMER0_A0_VECTOR))) Timer0_A0_ISR (void)
 {
 
     if ((__noiseSel & 0x01) == 0x00) {     // time the node is "offline"
-
-        ADC12IER0 &= ~ADC12IE0;  // disable ADC interrupt
 
         TA0R = 0;   // reset timer
         TA0CCR0 = rstInterval+__noise[__noiseSel];
