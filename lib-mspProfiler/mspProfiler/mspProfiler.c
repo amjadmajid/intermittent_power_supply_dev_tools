@@ -18,7 +18,7 @@ uint32_t cp_getRes() {
 
 	__overflow = 0;                 // reset the overflow counter
 	TB0CTL |= TBCLR;                // reset the timer
-	return currnt_timer;
+	return ovrflw;
 }
 
 
@@ -76,3 +76,4 @@ void __attribute__ ((interrupt(TIMER0_B1_VECTOR))) TIMER0_B1_ISR (void)
     default: break;
   }
 }
+
